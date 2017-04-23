@@ -25,31 +25,13 @@
     <![endif]-->
 </head>
 <header id="header"></header>
+<div id="loginDropdown"></div>
 <body>
-
-<%--<h1 id="h1">${message}</h1>--%>
 <div></div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <%--<script src="js/jquery-3.1.1.js"></script>--%>
 <script src="js/bootstrap.min.js"></script>
-<script>$.post(
-    "/${pageContext.servletContext.contextPath}index",
-    [],
-    function (response) {
-        var element = document.getElementById("h1");
-        element.innerHTML = response;
-    }
-)</script>
-<script>
-    $.post(
-        "/${pageContext.servletContext.contextPath}header",
-        [],
-        function (response) {
-            var element = document.getElementById("header");
-            element.innerHTML = response;
-        }
-    )
-</script>
+<script src="js/ajaxScripts.js"></script>
 </body>
 </html>
