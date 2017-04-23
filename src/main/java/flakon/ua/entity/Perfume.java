@@ -23,11 +23,11 @@ public class Perfume {
     private String name;
     @Column(name="scent")
     private String scent;
-    @Column(name="scent", length = 25000)
+    @Column(name="description", length = 25000)
     private String description;
-    @OneToMany (mappedBy = "perfume")
+    @OneToMany (mappedBy = "id", fetch = FetchType.LAZY)
     private List<Flavor> flavors;
-    @OneToMany (mappedBy = "perfume")
+    @OneToMany (mappedBy = "id", fetch = FetchType.LAZY)
     private List<PerfumePrice> perfumePrices;
 
     public Perfume() {
