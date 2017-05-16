@@ -1,7 +1,5 @@
 package flakon.ua.entity;
 
-import com.sun.istack.internal.NotNull;
-
 import javax.persistence.*;
 
 import java.util.List;

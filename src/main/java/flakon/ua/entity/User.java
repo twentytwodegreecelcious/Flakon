@@ -24,8 +24,18 @@ public class User {
     private String city;
     @Column(name = "country", length = 50)
     private String country;
+    @Column(name = "admin")
+    private Boolean admin;
 
     public User() {
+    }
+
+    public Boolean getAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(Boolean admin) {
+        this.admin = admin;
     }
 
     public Integer getId() {

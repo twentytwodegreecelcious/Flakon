@@ -17,6 +17,14 @@ $.post(
         element.innerHTML = response;
     }
 );
+$.post(
+    "/getItems",
+    [],
+    function (response) {
+        var element = document.getElementById("mainContent");
+        element.innerHTML = response;
+    }
+);
 var getLoginForm = function () {
     $.post(
         "/getLoginForm",

@@ -27,7 +27,7 @@
 <header id="header"></header>
 <div id="loginDropdown"></div>
 <body>
-<div></div>
+<div id="mainContent"></div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <%--<script src="js/jquery-3.1.1.js"></script>--%>

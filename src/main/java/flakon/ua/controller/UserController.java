@@ -44,6 +44,7 @@ public class UserController {
                 user.setCountry(country);
                 user.setCity(city);
                 user.setPhoneNumber(phone);
+                user.setAdmin(false);
             }
             userDao.save(user);
             return "index";
@@ -56,5 +57,19 @@ public class UserController {
     public String logout(HttpSession httpSession) {
         httpSession.removeAttribute("user");
         return "index";
+    }
+
+    @RequestMapping(value="/saveProfileChanges", method=RequestMethod.POST)
+    public void setProfileChanges (HttpSession httpSession,
+                                   @RequestParam("name") String name,  @RequestParam("phone") String phone,
+                                   @RequestParam("country") String country,
+                                   @RequestParam("city") String city) {
+        User user = userDao.findByEmail(((User) httpSession.getAttribute("user")).getEmail());
+        user.setName(name);
+        user.setPhoneNumber(phone);
+        user.setCountry(country);
+        user.setCity(city);
+        userDao.save(user);
+        //TODO check if method update is needed to perform this operation
     }
 }
