@@ -10,8 +10,8 @@ import javax.persistence.*;
 public class Flavor {
 
     @Id
+    @ManyToOne
     @Column(name="id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @Column(name="flavor")
     private String flavor;
@@ -36,4 +36,5 @@ public class Flavor {
     public void setFlavor(String flavor) {
         this.flavor = flavor;
     }
+
 }

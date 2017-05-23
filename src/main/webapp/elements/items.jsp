@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <div class="catalogue">
     <div class="container">
-        <c:forEach items="${items}" var="p"> <!-- Podskazano Guley -->
+        <c:forEach items="${items}" var="p">
             <c:set var="i" value="${0}"/>
             <c:choose>
                 <c:when test="${i%3 == 0}">
@@ -18,7 +18,7 @@
                         <input name="asd"/>
                     </div>
                     ${i+=1}
-                </c:when> <!-- A vot tut real pomog -->
+                </c:when>
                 <c:when test="${i%3 == 1}">
                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 f-item">PIZDA</div>
                     ${i+=1}

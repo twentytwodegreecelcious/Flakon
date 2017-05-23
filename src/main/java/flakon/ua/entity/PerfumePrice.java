@@ -11,13 +11,13 @@ import java.util.ArrayList;
 public class PerfumePrice {
 
     @Id
+    @ManyToOne
     @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @Column(name = "volume")
-    private Double volume;
+    private String volume;
     @Column(name = "price")
-    private Double price;
+    private String price;
 
 
 
@@ -32,19 +32,19 @@ public class PerfumePrice {
         this.id = id;
     }
 
-    public Double getVolume() {
+    public String getVolume() {
         return volume;
     }
 
-    public void setVolume(Double volume) {
+    public void setVolume(String volume) {
         this.volume = volume;
     }
 
-    public Double getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 }
